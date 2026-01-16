@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RK Knit Fab – Tasks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-slate-100">
+
+  <div class="max-w-3xl mx-auto p-6">
+
+    <!-- Header -->
+    <div class="mb-6">
+      <h1 class="text-2xl font-bold text-slate-800">RK Knit Fab</h1>
+      <p class="text-sm text-slate-500">Daily Tasks Dashboard</p>
+    </div>
+
+    <!-- Reminder -->
+    <div id="reminder" class="hidden mb-6 rounded-lg border-l-4 border-orange-500 bg-orange-50 p-4">
+      <div class="flex gap-3">
+        <i data-lucide="alert-triangle" class="text-orange-600"></i>
+        <div>
+          <p id="reminderText" class="font-semibold text-slate-800"></p>
+          <ul id="reminderList" class="text-sm list-disc pl-5 mt-1"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tasks -->
+    <div id="tasks" class="space-y-4"></div>
+
+    <!-- Empty State -->
+    <p id="empty" class="hidden text-center text-slate-500 mt-10">
+      No tasks for today 🎉
+    </p>
+
+  </div>
+
+  <script src="app.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
